@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShredSteam — 3D Build Simulator</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="app">
+    <canvas id="scene"></canvas>
+
+    <aside class="panel panel-left glass">
+      <h1><span class="icon">🔥</span> SHREDSTEAM</h1>
+      <p class="subtitle" id="subtitle"></p>
+      <p class="org" id="org"></p>
+
+      <h2>Key Stages</h2>
+      <ul id="stages"></ul>
+
+      <h2>How It Works</h2>
+      <p id="howItWorks" class="how-it-works"></p>
+
+      <div id="buildCaption" class="build-caption"></div>
+    </aside>
+
+    <aside class="panel panel-right glass">
+      <h2>Live Energy Monitor</h2>
+
+      <div class="meter">
+        <label>Fuel Level</label>
+        <div class="bar"><div id="bar-fuel" class="fill fill-amber"></div></div>
+      </div>
+
+      <div class="meter">
+        <label>Steam Pressure</label>
+        <div class="bar"><div id="bar-steam" class="fill fill-teal"></div></div>
+      </div>
+
+      <div class="meter">
+        <label>Bulb Brightness</label>
+        <div class="bar"><div id="bar-bulb" class="fill fill-violet"></div></div>
+      </div>
+
+      <div class="steps-count">
+        <div id="burnCount">0</div>
+        <span>Burn Cycles</span>
+      </div>
+    </aside>
+
+    <div class="dock glass">
+      <button id="btnRotate">🔄 Rotate</button>
+      <button id="btnExplode">💥 Explode</button>
+      <button id="btnBurn">🔥 Feed &amp; Burn</button>
+      <button id="btnDayNight">☀️ Day</button>
+      <button id="btnNextPart">➡️ Next Part</button>
+      <button id="btnReset">↩️ Reset</button>
+    </div>
+  </div>
+
+  <!-- Load Three.js (r128) and OrbitControls via CDN as global scripts to support opening via local file:// protocol -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <script src="script.js?v=9"></script>
+</body>
+</html>
